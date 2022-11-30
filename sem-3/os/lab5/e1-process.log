@@ -1,0 +1,24 @@
+stat:
+   8397 grigorii  20   0   67720  61288   2972 R  87,5   1,0   0:01.23 mem.bash
+   8397 grigorii  20   0  412768 406336   2972 R  87,5   6,7   0:08.80 mem.bash
+   8397 grigorii  20   0  891988 885368   2972 R  87,5  14,6   0:19.16 mem.bash
+   8397 grigorii  20   0 1311148   1,2g   2972 R  68,8  21,6   0:28.45 mem.bash
+   8397 grigorii  20   0 1735844   1,6g   2972 R  76,5  28,6   0:37.87 mem.bash
+   8397 grigorii  20   0 2173880   2,1g   2972 R  86,7  35,8   0:47.80 mem.bash
+   8397 grigorii  20   0 2605044   2,5g   2972 R  93,3  42,9   0:57.74 mem.bash
+   8397 grigorii  20   0 3035956   2,9g   2972 R  93,8  50,1   1:07.63 mem.bash
+   8397 grigorii  20   0 3467380   3,3g   2972 R  93,3  57,2   1:17.59 mem.bash
+   8397 grigorii  20   0 3893804   3,7g   2972 R  87,5  64,2   1:27.44 mem.bash
+   8397 grigorii  20   0 4322060   4,1g   2972 R  87,5  71,3   1:37.35 mem.bash
+   8397 grigorii  20   0 4717464   4,5g   2300 R  52,9  77,8   1:46.54 mem.bash
+   8397 grigorii  20   0 5102176   4,9g   2160 R  87,5  84,2   1:55.42 mem.bash
+   8397 grigorii  20   0 5483452   5,1g   2160 R  75,0  88,2   2:04.69 mem.bash
+   8397 grigorii  20   0 5891924   5,1g   2160 R  86,7  88,4   2:14.27 mem.bash
+   8397 grigorii  20   0 6291816   5,1g   2104 R  81,2  88,4   2:23.74 mem.bash
+   8397 grigorii  20   0 6598000   5,2g      0 R   4,0  90,0   2:32.47 mem.bash
+   8397 grigorii  20   0 6601168   5,2g    428 D   5,5  90,1   2:38.47 mem.bash
+   8397 grigorii  20   0 6612916   5,2g      0 D   1,4  90,3   2:41.00 mem.bash
+   8397 grigorii  20   0 6614104   5,2g      0 R   0,6  90,3   2:46.68 mem.bash
+   8397 grigorii  20   0 6619384   5,2g      0 R   0,9  90,3   2:50.10 mem.bash
+[10740.302624] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/user@1000.service,task=mem.bash,pid=8397,uid=1000
+[10740.302634] Out of memory: Killed process 8397 (mem.bash) total-vm:6619648kB, anon-rss:5466028kB, file-rss:0kB, shmem-rss:0kB, UID:1000 pgtables:12988kB oom_score_adj:0
