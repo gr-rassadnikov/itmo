@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="146" id="Xmi-br-N5G" customClass="Cell" customModule="ios_itmo_2022_assignment2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xmi-br-N5G" id="qh8-Wl-cMF">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-u8-C3k">
+                        <rect key="frame" x="5" y="5" width="380" height="136"/>
+                        <color key="backgroundColor" name="ColorTextField"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="ColorBackground"/>
+                <constraints>
+                    <constraint firstItem="HUp-u8-C3k" firstAttribute="top" secondItem="qh8-Wl-cMF" secondAttribute="top" constant="5" id="9wc-0a-g0a"/>
+                    <constraint firstAttribute="trailing" secondItem="HUp-u8-C3k" secondAttribute="trailing" constant="5" id="VwY-1Y-W1H"/>
+                    <constraint firstAttribute="bottom" secondItem="HUp-u8-C3k" secondAttribute="bottom" constant="5" id="kOJ-oh-Lnu"/>
+                    <constraint firstItem="HUp-u8-C3k" firstAttribute="leading" secondItem="qh8-Wl-cMF" secondAttribute="leading" constant="5" id="yAR-Lk-PUt"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                        <integer key="value" value="8"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth ">
+                        <integer key="value" value="4"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                        <color key="value" name="ColorStarsYellow"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="view" destination="HUp-u8-C3k" id="pM5-uX-hIF"/>
+            </connections>
+            <point key="canvasLocation" x="-226.15384615384613" y="-220.37914691943126"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="ColorBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ColorStarsYellow">
+            <color red="0.96899998188018799" green="0.80400002002716064" blue="0.37299999594688416" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ColorTextField">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
