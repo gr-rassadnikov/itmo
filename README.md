@@ -3,10 +3,15 @@
 ## 3 семестр
 ### IOS
 [HW - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--1-algoTask-Swift) | ...
+
 [HW - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--2-addMovie) | ...
+
 [HW - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--3-tableMovies) | ...
+
 [HW - 4](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--4-Tracker-GCD-asyncAwait-Combine) | Написать три трекера для параллельного выполнения задач. GCD. Async, await. Combine.
+
 [HW - 5](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--5-server-movies-data-logIn) | Добавить сервер, сделать загрузку, подгрузку постов. Добавить вход/регистрацию пользователя. Использовать написанный трекер для подгрузи картинок.
+
 [HW - 6](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/ios/HW--6-SwiftUI) | Добавить страницу изменения постов на SwiftUI.
 
 ### Bash
