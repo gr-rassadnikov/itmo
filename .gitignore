@@ -4,6 +4,8 @@
 
 *.DS_Store*
 CMakeLists.txt
+.DS_Store
+*.DS_Store
 
 
 # -----------------C++ IGNORE------------------------------
