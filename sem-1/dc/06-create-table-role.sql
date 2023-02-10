@@ -1,0 +1,8 @@
+USE bloggle;
+
+CREATE TABLE `Role` (
+`name` ENUM('WRITER', 'MANAGER', 'ADMIN') NOT NULL,
+`canWritePost` BOOLEAN NOT NULL DEFAULT FALSE,
+`canViewUsers` BOOLEAN NOT NULL DEFAULT FALSE,
+PRIMARY KEY (`name`)
+) ENGINE = InnoDB;
