@@ -60,15 +60,86 @@
 
 [calc-trig](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/cpp/calc-trig) | Простой калькулятор-парсер с тригонометрией.
  
+### Парадигмы программирования
 
-### Java
+#### [Java](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java)
+
+[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/expression) |
+
+[queue](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/queue) |
+
+[search](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/search) |
+
+#### [JS](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/javascript)
+
+[functionalExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/functionalExpression.js) |
+
+[objectExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/objectExpression.js) |
+
+#### [Clojure](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/clojure)
+
+[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/expression.clj) |
+
+[linear](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/linear.clj) |
+
+[parser](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/parser.clj) |
+
+[proto](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/proto.clj) |
+
+#### [Prolog](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/prolog)
+
+[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/expression.pl) |
+
+[primes](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/primes.pl) |
+
+[tree-map](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/tree-map.pl) |
 
 ### Дискретная математика
 
+[lab-hw](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/dm) |
+
+
 ### Алгоритмы и структуры данных
+
+[](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/asd) |
 
 ## 1 семестр
 ### Java
-### ЭВМ
+
+[icpc](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/qf-solutions) |
+
+[MNKgame](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/game) |
+
+[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/expression) |
+
+[Md2Html](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/md2html) |
+
+[markup](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/markup) |
+
+### Архитектура ЭВМ
+
+[HW - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-1) |
+
+[HW - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-2) |
+
+[HW - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-3) |
+
+[HW - 4](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-4) |
+
+[HW - 5](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-5) |
+
 ### Дискретная математика
+
+[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-1) |
+
+[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-2) |
+
+[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-3) |
+
 ### Алгоритмы и структуры данных
+
+[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-1) |
+
+[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-2) |
+
+[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-3) |
