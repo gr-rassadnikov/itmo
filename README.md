@@ -62,84 +62,82 @@
  
 ### Парадигмы программирования
 
-#### [Java](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java)
+#### Java
 
-[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/expression) |
+[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/expression) | Парсер арифмитических выражений с обработкой ошибок.
 
-[queue](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/queue) |
+[queue](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/queue) | Разные реализации очереди.
 
-[search](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/search) |
+[search](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/java/search) | Разные реализации бинарного поиска.
 
-#### [JS](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/javascript)
+#### JS
 
-[functionalExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/functionalExpression.js) |
+[functionalExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/functionalExpression.js) | Парсер на функциях.
 
-[objectExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/objectExpression.js) |
+[objectExpression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/javascript/objectExpression.js) | Парсер арифмитических выражений на объектах.
 
-#### [Clojure](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/clojure)
+#### Clojure
 
-[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/expression.clj) |
+[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/expression.clj) | Арифмитические выражения.
 
-[linear](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/linear.clj) |
+[linear](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/linear.clj) | Вычисления в линейной алгебре.
 
-[parser](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/parser.clj) |
+[parser](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/parser.clj) | Парсер арифмитических выражений.
 
-[proto](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/clojure/proto.clj) |
+#### Prolog
 
-#### [Prolog](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/prog/prolog)
+[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/expression.pl) | Парсер арифмитических выражений.
 
-[expression](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/expression.pl) |
+[primes](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/primes.pl) | Простые числа.
 
-[primes](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/primes.pl) |
-
-[tree-map](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/tree-map.pl) |
+[tree-map](https://github.com/gr-rassadnikov/itmo/blob/main/sem-2/prog/prolog/tree-map.pl) | Реализация дерева.
 
 ### Дискретная математика
 
-[lab-hw](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/dm) |
+[lab-hw](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/dm) | Языки, грамматики, регулярки.
 
 
 ### Алгоритмы и структуры данных
 
-[](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/asd) |
+[lab](https://github.com/gr-rassadnikov/itmo/tree/main/sem-2/asd) | Дерево отрезков, декартово дерево, другие деревья
 
 ## 1 семестр
 ### Java
 
-[icpc](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/qf-solutions) |
+[icpc](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/qf-solutions) | Решение задачик с icpc на java.
 
-[MNKgame](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/game) |
+[MNKgame](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/game) | Реализации игры [MNK](https://en.wikipedia.org/wiki/M,n,k-game).
 
-[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/expression) |
+[expression](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/expression) | Парсер арифмитических выражений.
 
-[Md2Html](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/md2html) |
+[Md2Html](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/md2html) | Парсер-транслятор из markdown в html.
 
-[markup](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/markup) |
+[markup](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/java/java-solutions/markup) | Генератор markdown разметки.
 
 ### Архитектура ЭВМ
 
-[HW - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-1) |
+[HW - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-1) | Карты Карно
 
-[HW - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-2) |
+[HW - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-2) | Функция вычесления корня на логичискех схемах. Счетчик на логических схемах.
 
-[HW - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-3) |
+[HW - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-3) | Решение задачек на Кэш.
 
-[HW - 4](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-4) |
+[HW - 4](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-4) | Дизассемблер. ISA. Парсинг elf файла.
 
-[HW - 5](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-5) |
+[HW - 5](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/aibm/hw-5) | Парралельная обработка изображения. Изменение контрастности. OpenMP.
 
 ### Дискретная математика
 
-[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-1) |
+[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-1) | Отношения
 
-[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-2) |
+[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-2) | Булевы функции
 
-[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-3) |
+[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/dm/lab-3) | Комбинаторика
 
 ### Алгоритмы и структуры данных
 
-[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-1) |
+[LAB - 1](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-1) | Сортировки
 
-[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-2) |
+[LAB - 2](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-2) | Динамическое программирование
 
-[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-3) |
+[LAB - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-1/asd/lab-3) | Двумерное динамическое программирование
