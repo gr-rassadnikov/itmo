@@ -22,13 +22,13 @@
 
 [HW - 2]() | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab2.pdf) | Мониторинг процессов и ресурсов в ОС Linux.
 
-[HW - 3]() | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab3.pdf)  | Управление процессами в ОС Linux.
+[HW - 3](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/os/lab3) | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab3.pdf)  | Управление процессами в ОС Linux.
 
-[HW - 4]()  | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab4.pdf) |  Работа с файлово-каталожной системой в ОС Linux.
+[HW - 4](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/os/lab4)  | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab4.pdf) |  Работа с файлово-каталожной системой в ОС Linux.
 
 [HW - 5](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/os/lab5)  | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab5.pdf) |  Управление памятью в ОС Linux. Использование утилиты top для мониторинга параметров памяти. Использование имитационных экспериментов для анализа работы механизмов управления памятью.
 
-[HW - 6 - hard]()  | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab6_hard.pdf) | Экспериментальная оценка параметров производительности операционной системы. Оценить реальные накладные расходы на параллельное выполнение задач в условиях преимущественного использования ресурса процессора или ресурса дисковой подсистемы.
+[HW - 6 - hard](https://github.com/gr-rassadnikov/itmo/tree/main/sem-3/os/lab6)  | [Условие](https://github.com/gr-rassadnikov/itmo/blob/main/sem-3/os/OS_Lab6_hard.pdf) | Экспериментальная оценка параметров производительности операционной системы. Оценить реальные накладные расходы на параллельное выполнение задач в условиях преимущественного использования ресурса процессора или ресурса дисковой подсистемы.
 
 
 ### Дискретная математика
