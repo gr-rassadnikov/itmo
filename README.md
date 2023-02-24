@@ -3,13 +3,14 @@
 
 Меня зовут Рассадников Григорий. Я студент университета ИТМО факультета ФИТиП по направлению Прикладная математика и информатике. Кафедра КТ (Компьютерные технологии)
 
-[CV](https://github.com/gr-rassadnikov/itmo/blob/main/resume.pdf) | [Telegram](https://t.me/gr_rassadnikov) | VK | Mail : gr.rassadnikov@mail.ru | +79312417330
+[CV](https://github.com/gr-rassadnikov/itmo/blob/main/resume.docx) | [Telegram](https://t.me/gr_rassadnikov) | VK | Mail : gr.rassadnikov@mail.ru | +79312417330
 
 
 ## 4 семестр
 ### Java advanced (скрыто для защиты от списывания)
 
-[walk](https://www.kgeorgiy.info/courses/java-advanced/homeworks.html#walk) |  Обход файлов. Подсчет хеш-сумм файлов.
+[Walk](https://www.kgeorgiy.info/courses/java-advanced/homeworks.html#walk) |  Обход файлов. Подсчет хеш-сумм файлов.
+[ArraySet]() | Неизменяемое упорядоченное множество, поддержать интерфейс SortedSet.
 
 ### Математическая логика
 
