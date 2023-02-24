@@ -10,6 +10,7 @@ import Foundation
 
 let n = Int(readLine()!)!
 
+
 let parents : [Int] = (readLine()?.split(separator: " ").map({ Int($0)! }))!
 
 var graph : [[Int]] = Array(repeating: [], count: n)
