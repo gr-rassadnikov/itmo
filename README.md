@@ -10,6 +10,7 @@
 ### Java advanced (скрыто для защиты от списывания)
 
 [Walk](https://www.kgeorgiy.info/courses/java-advanced/homeworks.html#walk) |  Обход файлов. Подсчет хеш-сумм файлов.
+
 [ArraySet]() | Неизменяемое упорядоченное множество, поддержать интерфейс SortedSet.
 
 ### Математическая логика
