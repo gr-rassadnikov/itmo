@@ -7,19 +7,20 @@
 
 
 
-//let s = readLine()!
-//
-//var st : Set<String> = Set(arrayLiteral: "")
-//
-//var add = ""
-//
-//for i in s {
-//    if st.contains(add) {
-//        add+=String(i)
-//    } else {
-//        st.insert(add)
-//        print(add, terminator: " ")
-//        add = String(i)
-//    }
-//}
-//print(add)
+let s = readLine()!
+
+var st : Set<String> = Set(arrayLiteral: "")
+
+var add = ""
+
+for i in s {
+    if st.contains(add) {
+        add+=String(i)
+    } else {
+        st.insert(add)
+        print(add, terminator: " ")
+        add = String(i)
+    }
+}
+print(add)
+

@@ -13,5 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="info.kgeorgiy.java.advanced.walk" />
     <orderEntry type="module" module-name="walk22" />
+    <orderEntry type="module" module-name="arrayset22" />
+    <orderEntry type="module" module-name="info.kgeorgiy.java.advanced.arrayset" />
   </component>
 </module>
