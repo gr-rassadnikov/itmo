@@ -3,8 +3,8 @@
 
 Меня зовут Рассадников Григорий. Я студент университета ИТМО факультета ФИТиП по направлению Прикладная математика и информатике. Кафедра КТ (Компьютерные технологии)
 
-[CV](https://github.com/gr-rassadnikov/itmo/blob/main/resume.docx) | [Telegram](https://t.me/gr_rassadnikov) | VK | Mail : gr.rassadnikov@mail.ru | +79312417330
-
+[CV](https://github.com/gr-rassadnikov/itmo/blob/main/CV.pdf) | [Telegram](https://t.me/gr_rassadnikov) | VK | Mail : gr.rassadnikov@mail.ru | +79312417330
+[IOS](https://github.com/gr-rassadnikov/itmo/tree/helps/ios.md) | [Java](https://github.com/gr-rassadnikov/itmo/tree/helps/java.md) | [C++](https://github.com/gr-rassadnikov/itmo/tree/helps/cpp.md)
 
 ## 4 семестр (многое скрыто для защиты от списывания, для выдачи прав, можно написать в telegram)
 ### Яндекс школа мобильной (IOS) разработки в Сириусе
