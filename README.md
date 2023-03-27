@@ -5,7 +5,7 @@
 
 [CV](https://github.com/gr-rassadnikov/itmo/blob/main/CV.pdf) | [Telegram](https://t.me/gr_rassadnikov) | VK | Mail : gr.rassadnikov@mail.ru | +79312417330
 
-[IOS](https://github.com/gr-rassadnikov/itmo/blob/main/helps/ios.md) | [Java](https://github.com/gr-rassadnikov/itmo/blob/main/helps/java.md) | [C++](https://github.com/gr-rassadnikov/itmo/blob/main/helps/cpp.md) | [Android] | [Python] | [JS] | [Clojure] | [Prolog]
+[IOS](https://github.com/gr-rassadnikov/itmo/blob/main/helps/ios.md) | [Java](https://github.com/gr-rassadnikov/itmo/blob/main/helps/java.md) | [C++](https://github.com/gr-rassadnikov/itmo/blob/main/helps/cpp.md) | Android | Python | JS | Clojure | Prolog
 
 ## 4 семестр (многое скрыто для защиты от списывания, для выдачи прав, можно написать в telegram)
 ### Яндекс школа мобильной (IOS) разработки в Сириусе
@@ -20,7 +20,9 @@
 
 [StudentDB]() | Разработайте класс StudentDB, осуществляющий поиск по базе данных студентов. Каждый метод должен состоять из ровно одного оператора. Применение лямбда-выражений и потоков.
 
-[Implementor]() | Реализуйте класс Implementor, генерирующий реализации классов и интерфейсов.
+[Implementor, Jar, Javadoc]() | Реализуйте класс Implementor, генерирующий реализации классов и интерфейсов. Модифицируйте Implemetor так, чтобы при запуске с аргументами -jar имя-класса файл.jar он генерировал .jar-файл с реализацие. Создайте .jar-файл, содержащий скомпилированный Implementor и сопутствующие класс. Напишите скрипты. Документируйте класс Implementor и сопутствующие классы с применением Javadoc. Скрипт для генерации документации.
+
+[IterativeParallelism]() | Обрабатывать списки в несколько потоков. При выполнении задания нельзя использовать Concurrency Utilities.
 
 ### Математическая логика
 
