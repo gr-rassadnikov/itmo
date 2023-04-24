@@ -23,10 +23,10 @@ public class GCDJobTracker<Key: Hashable, Output, Failure: Error>: CallbackJobTr
 
     public func startJob(for key: Key, completion: @escaping (Result<Output, Failure>) -> Void) {
         queueTrack.async { [self] in
-            if memoizing.contains(.started) { // хотим использовать трекер
-                if let value = dict[key] { // нашли задачу по ключу
+            if memoizing.contains(.started) {
+                if let value = dict[key] {
                     switch value {
-                    case let .completed(result): // задача уже завершилась
+                    case let .completed(result):
                         switch result {
                         case .success:
                             if memoizing.contains(.succeeded) {
@@ -41,7 +41,7 @@ public class GCDJobTracker<Key: Hashable, Output, Failure: Error>: CallbackJobTr
                         array.append(completion)
                         dict[key] = Value.run(array)
                     }
-                } else { // такой задачи еще не было, создаем ее и запоминаем в []
+                } else {
                     dict[key] = Value.run([completion])
                     globalQueueTrack.async {
                         self.worker(key) { (result: Result<Output, Failure>) in
@@ -55,12 +55,12 @@ public class GCDJobTracker<Key: Hashable, Output, Failure: Error>: CallbackJobTr
                                     switch result {
                                     case .failure:
                                         self.dict[key] = Value.completed(result)
-                                    case .success: // задача завершилась успешно, но ее не надо созранять
+                                    case .success:
                                         self.dict.removeValue(forKey: key)
                                     }
                                 case .succeeded:
                                     switch result {
-                                    case .failure: // задача завершилась с ошибкой, но ее не надо созранять
+                                    case .failure:
                                         self.dict.removeValue(forKey: key)
                                     case .success:
                                         self.dict[key] = Value.completed(result)
@@ -72,7 +72,7 @@ public class GCDJobTracker<Key: Hashable, Output, Failure: Error>: CallbackJobTr
                         }
                     }
                 }
-            } else { // вообще не хотим использоватьь трекер и не хотим сохранять задачи
+            } else {
                 globalQueueTrack.async {
                     self.worker(key) { (result: Result<Output, Failure>) in
                         self.queueTrack.async {

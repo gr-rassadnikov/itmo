@@ -92,7 +92,7 @@ class LogInController: UIViewController {
     }
 
     @objc
-    private func didTapButtonEnter() {
+    private dynamic func didTapButtonEnter() {
         if name.isNotEmpty, password.isNotEmpty, name.isValid, password.isValid {
             if let log = name.inputTextField.text,
                let pas = password.inputTextField.text
