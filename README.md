@@ -10,6 +10,8 @@
 ## 4 семестр (многое скрыто для защиты от списывания, для выдачи прав, можно написать в telegram)
 ### Яндекс школа мобильной (IOS) разработки в Сириусе
 
+[GoInvest](https://github.com/Sirius-Mobile-2023/GO-Invest) | Инвестиционное приложение GoInvest, работа на проектом в команде под руководством менторов из Яндекс.
+
 [Входной тест](https://github.com/gr-rassadnikov/itmo/tree/main/sem-4/sirius/siriusTest) | Входной тест с задачками на Swift.
 
 ### Java advanced
