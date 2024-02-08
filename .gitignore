@@ -9,10 +9,6 @@ CMakeLists.txt
 
 #------------- ignore directories -------------------------
 
-*.gradle
-*.idea
-*.teamcity
-
 #-------------- C++ tests ignore ---------------------------
 
 *test*
