@@ -8,16 +8,13 @@ CMakeLists.txt
 *.DS_Store
 
 #------------- ignore directories -------------------------
-sem-3/contest/intro-lab-gr-rassadnikov
-sem-3/dm/randomGraphGenerator
-sem-3/ios/ios-itmo-2022-assignment-1-gr-rassadnikov
-sem-3/ios/ios-itmo-2022-assignment-2-gr-rassadnikov
-sem-3/ios/ios-itmo-2022-assignment-3-gr-rassadnikov
-sem-3/ios/ios-itmo-2022-assignment-4-gr-rassadnikov
-sem-3/ios/ios-itmo-2022-assignment-5-gr-rassadnikov
-sem-3/ios/ios-itmo-2022-assignment-6-gr-rassadnikov
-*java-advanced-2023*
-
+*.git
+*.gihub
+*.idea
+*.gitignore
+*.gradle
+*.idea
+*.teamcity
 
 #-------------- C++ tests ignore ---------------------------
 
