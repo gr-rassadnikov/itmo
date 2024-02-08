@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSolution" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-10-02T21:36:51" hostname="MacBook-Pro-Grigorii.local" time="0.119">
+  <properties/>
+  <testcase name="Then: secret technic was used" classname="TestSolution" time="0.099"/>
+  <testcase name="Then: could create OK" classname="TestSolution" time="0.002"/>
+  <testcase name="Then: could create Error" classname="TestSolution" time="0.0"/>
+  <testcase name="Then: result is Ok" classname="TestSolution" time="0.002"/>
+  <testcase name="Then: result is Error" classname="TestSolution" time="0.001"/>
+  <testcase name="Then: methods should return value" classname="TestSolution" time="0.001"/>
+  <testcase name="Then: methods should not return value" classname="TestSolution" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

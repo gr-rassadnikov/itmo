@@ -1,0 +1,11 @@
+type: theory
+files:
+  - name: src/Main.kt
+    visible: true
+    encrypted_text: NDA7NYDJ4pT3F7ChgC7OnY7PiQg0Z9w3V0uXkpoQ4U1bA82PIPbBUwzzqamNfgOY
+    learner_created: false
+status: Solved
+feedback:
+  time: "Sun, 08 Oct 2023 11:20:22 UTC"
+record: -1
+post_submission_on_open: true

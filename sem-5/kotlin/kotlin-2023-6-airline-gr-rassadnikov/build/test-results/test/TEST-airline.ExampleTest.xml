@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="airline.ExampleTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-01-02T16:31:55" hostname="MacBook-Pro-Grigorii.local" time="15.652">
+  <properties/>
+  <testcase name="testAudioAlerts()" classname="airline.ExampleTest" time="3.212"/>
+  <testcase name="testBooking()" classname="airline.ExampleTest" time="3.458"/>
+  <testcase name="testInformationDisplay()" classname="airline.ExampleTest" time="2.003"/>
+  <testcase name="testMultipleFlights()" classname="airline.ExampleTest" time="6.54"/>
+  <testcase name="testSimple()" classname="airline.ExampleTest" time="0.436"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

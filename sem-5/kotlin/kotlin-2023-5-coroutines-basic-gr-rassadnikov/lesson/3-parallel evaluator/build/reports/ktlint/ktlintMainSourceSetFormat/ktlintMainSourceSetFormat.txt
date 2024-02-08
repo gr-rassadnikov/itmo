@@ -1,0 +1,4 @@
+[90m/Users/grigorii/itmo/sem-5/kotlin/kotlin-2023-5-coroutines-basic-gr-rassadnikov/lesson/3-parallel evaluator/src/[0mParallelEvaluator.kt[90m:[0m2[90m:1:[0m Unused import [90m(standard:no-unused-imports)[0m
+
+Summary error count (descending) by rule:
+  standard:no-unused-imports: 1

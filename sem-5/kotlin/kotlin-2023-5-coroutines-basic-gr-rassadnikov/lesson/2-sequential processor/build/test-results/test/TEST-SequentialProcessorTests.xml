@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SequentialProcessorTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-11-20T18:48:53" hostname="MacBook-Pro-Grigorii.local" time="2.513">
+  <properties/>
+  <testcase name="testCorrectness" classname="SequentialProcessorTests" time="0.346"/>
+  <testcase name="testLinearizability" classname="SequentialProcessorTests" time="0.869"/>
+  <testcase name="testMultiple" classname="SequentialProcessorTests" time="0.657"/>
+  <testcase name="testParallel" classname="SequentialProcessorTests" time="0.64"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

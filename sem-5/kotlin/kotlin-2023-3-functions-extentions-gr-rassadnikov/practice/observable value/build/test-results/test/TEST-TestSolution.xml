@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSolution" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-10-15T18:49:56" hostname="MacBook-Pro-Grigorii.local" time="0.019">
+  <properties/>
+  <testcase name="Then: can read value" classname="TestSolution" time="0.007"/>
+  <testcase name="Then: can write value" classname="TestSolution" time="0.0"/>
+  <testcase name="Then: can subscribe/unsubscribe" classname="TestSolution" time="0.001"/>
+  <testcase name="Then: could run example from task" classname="TestSolution" time="0.001"/>
+  <testcase name="Then: all observers will be notified" classname="TestSolution" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

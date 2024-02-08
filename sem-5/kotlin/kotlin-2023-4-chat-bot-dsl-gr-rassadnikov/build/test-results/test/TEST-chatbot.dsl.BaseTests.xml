@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="chatbot.dsl.BaseTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-10-28T14:49:40" hostname="MacBook-Pro-Grigorii.local" time="0.041">
+  <properties/>
+  <testcase name="setupLogLevelUsingUse()" classname="chatbot.dsl.BaseTests" time="0.008"/>
+  <testcase name="simpleChatBot()" classname="chatbot.dsl.BaseTests" time="0.009"/>
+  <testcase name="userNameContext()" classname="chatbot.dsl.BaseTests" time="0.008"/>
+  <testcase name="basicBehaviourCommands()" classname="chatbot.dsl.BaseTests" time="0.003"/>
+  <testcase name="setupLogLevelUsingPlus()" classname="chatbot.dsl.BaseTests" time="0.001"/>
+  <testcase name="messageBuilder()" classname="chatbot.dsl.BaseTests" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-11-26T15:56:43" hostname="MacBook-Pro-Grigorii.local" time="0.999">
+  <properties/>
+  <testcase name="testOneTask" classname="Tests" time="0.038"/>
+  <testcase name="testFailure" classname="Tests" time="0.341"/>
+  <testcase name="testBase" classname="Tests" time="0.208"/>
+  <testcase name="testCancellation" classname="Tests" time="0.41"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
