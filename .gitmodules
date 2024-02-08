@@ -1,7 +1,0 @@
-[submodule "bptree-gr-rassadnikov"]
-	path = sem-2/cpp/bptree-gr-rassadnikov
-	url = https://github.com/itiviti-cpp-2022/bptree-gr-rassadnikov.git
-
-[submodule "sem-4/java/JavaAdvanced/shared/java-advanced-2023"]
-	path = sem-4/java/JavaAdvanced/shared/java-advanced-2023
-	url = https://www.kgeorgiy.info/git/geo/java-advanced-2023.git

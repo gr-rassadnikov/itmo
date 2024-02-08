@@ -8,7 +8,7 @@ CMakeLists.txt
 *.DS_Store
 
 #------------- ignore directories -------------------------
-*.git
+*.git*
 *.gihub
 *.idea
 *.gitignore
