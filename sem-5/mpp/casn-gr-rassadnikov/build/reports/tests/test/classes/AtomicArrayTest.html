@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class AtomicArrayTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class AtomicArrayTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; AtomicArrayTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.496s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="modelCheckingTest"></a>
+<h3 class="failures">modelCheckingTest</h3>
+<span class="code">
+<pre>org.jetbrains.kotlinx.lincheck.LincheckAssertionError: 
+= Invalid execution results =
+| -------------------------------------------------------- |
+|           Thread 1           |         Thread 2          |
+| -------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true | get(0): 1                 |
+|                              | cas(1, 1, 0): false [0,1] |
+|                              | get(1): 0 [0,2]           |
+| -------------------------------------------------------- |
+
+---
+Values in &quot;[..]&quot; brackets indicate the number of completed operations
+in each of the parallel threads seen at the beginning of the current operation
+---
+
+The following interleaving leads to the error:
+| ---------------------------------------------------------------------------------------------- |
+|                                 Thread 1                                 |      Thread 2       |
+| ---------------------------------------------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true                                             |                     |
+|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                     |
+|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                     |
+|     switch                                                               |                     |
+|                                                                          | get(0): 1           |
+|                                                                          | cas(1, 1, 0): false |
+|                                                                          | get(1): 0           |
+|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                     |
+|   result: true                                                           |                     |
+| ---------------------------------------------------------------------------------------------- |
+
+Detailed trace:
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                 Thread 1                                 |                              Thread 2                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true                                             |                                                                     |
+|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                                                                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                                                                     |
+|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                                                                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                                                                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                                                                     |
+|     switch                                                               |                                                                     |
+|                                                                          | get(0): 1                                                           |
+|                                                                          |   get(0): 1 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |
+|                                                                          |     get(0): AtomicRef@1 at AtomicArray.get(AtomicArray.kt:11)       |
+|                                                                          |     getValue(): 1 at AtomicArray.get(AtomicArray.kt:11)             |
+|                                                                          |   result: 1                                                         |
+|                                                                          | cas(1, 1, 0): false                                                 |
+|                                                                          |   cas(1,1,0): false at AtomicArrayTest.cas(AtomicArrayTest.kt:20)   |
+|                                                                          |     get(1): AtomicRef@2 at AtomicArray.cas(AtomicArray.kt:18)       |
+|                                                                          |     compareAndSet(1,0): false at AtomicArray.cas(AtomicArray.kt:18) |
+|                                                                          |   result: false                                                     |
+|                                                                          | get(1): 0                                                           |
+|                                                                          |   get(1): 0 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |
+|                                                                          |     get(1): AtomicRef@2 at AtomicArray.get(AtomicArray.kt:11)       |
+|                                                                          |     getValue(): 0 at AtomicArray.get(AtomicArray.kt:11)             |
+|                                                                          |   result: 0                                                         |
+|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                                                                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                                                                     |
+|   result: true                                                           |                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker.check(LinChecker.kt:38)
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker$Companion.check(LinChecker.kt:144)
+	at app//org.jetbrains.kotlinx.lincheck.LinCheckerKt.check(LinChecker.kt:159)
+	at app//AtomicArrayTest.modelCheckingTest(AtomicArrayTest.kt:61)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="stressTest"></a>
+<h3 class="failures">stressTest</h3>
+<span class="code">
+<pre>org.jetbrains.kotlinx.lincheck.LincheckAssertionError: 
+= Invalid execution results =
+| ---------------------------- |
+|           Thread 1           |
+| ---------------------------- |
+| cas2(2, 0, 1, 1, 1, 0): true |
+| ---------------------------- |
+
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker.check(LinChecker.kt:38)
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker$Companion.check(LinChecker.kt:144)
+	at app//org.jetbrains.kotlinx.lincheck.LinCheckerKt.check(LinChecker.kt:159)
+	at app//AtomicArrayTest.stressTest(AtomicArrayTest.kt:37)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">modelCheckingTest</td>
+<td class="failures">0.067s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">stressTest</td>
+<td class="failures">0.429s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.3</a> at 17 янв. 2024 г., 01:52:38</p>
+</div>
+</div>
+</body>
+</html>

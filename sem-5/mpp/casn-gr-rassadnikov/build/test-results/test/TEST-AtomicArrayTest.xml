@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AtomicArrayTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2024-01-16T22:52:37" hostname="MacBook-Pro-Grigorii.local" time="0.496">
+  <properties/>
+  <testcase name="stressTest" classname="AtomicArrayTest" time="0.429">
+    <failure message="org.jetbrains.kotlinx.lincheck.LincheckAssertionError: &#10;= Invalid execution results =&#10;| ---------------------------- |&#10;|           Thread 1           |&#10;| ---------------------------- |&#10;| cas2(2, 0, 1, 1, 1, 0): true |&#10;| ---------------------------- |&#10;" type="org.jetbrains.kotlinx.lincheck.LincheckAssertionError">org.jetbrains.kotlinx.lincheck.LincheckAssertionError: 
+= Invalid execution results =
+| ---------------------------- |
+|           Thread 1           |
+| ---------------------------- |
+| cas2(2, 0, 1, 1, 1, 0): true |
+| ---------------------------- |
+
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker.check(LinChecker.kt:38)
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker$Companion.check(LinChecker.kt:144)
+	at app//org.jetbrains.kotlinx.lincheck.LinCheckerKt.check(LinChecker.kt:159)
+	at app//AtomicArrayTest.stressTest(AtomicArrayTest.kt:37)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="modelCheckingTest" classname="AtomicArrayTest" time="0.067">
+    <failure message="org.jetbrains.kotlinx.lincheck.LincheckAssertionError: &#10;= Invalid execution results =&#10;| -------------------------------------------------------- |&#10;|           Thread 1           |         Thread 2          |&#10;| -------------------------------------------------------- |&#10;| cas2(0, 0, 1, 1, 0, 1): true | get(0): 1                 |&#10;|                              | cas(1, 1, 0): false [0,1] |&#10;|                              | get(1): 0 [0,2]           |&#10;| -------------------------------------------------------- |&#10;&#10;---&#10;Values in &quot;[..]&quot; brackets indicate the number of completed operations&#10;in each of the parallel threads seen at the beginning of the current operation&#10;---&#10;&#10;The following interleaving leads to the error:&#10;| ---------------------------------------------------------------------------------------------- |&#10;|                                 Thread 1                                 |      Thread 2       |&#10;| ---------------------------------------------------------------------------------------------- |&#10;| cas2(0, 0, 1, 1, 0, 1): true                                             |                     |&#10;|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                     |&#10;|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                     |&#10;|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                     |&#10;|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                     |&#10;|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                     |&#10;|     switch                                                               |                     |&#10;|                                                                          | get(0): 1           |&#10;|                                                                          | cas(1, 1, 0): false |&#10;|                                                                          | get(1): 0           |&#10;|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                     |&#10;|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                     |&#10;|   result: true                                                           |                     |&#10;| ---------------------------------------------------------------------------------------------- |&#10;&#10;Detailed trace:&#10;| ---------------------------------------------------------------------------------------------------------------------------------------------- |&#10;|                                 Thread 1                                 |                              Thread 2                               |&#10;| ---------------------------------------------------------------------------------------------------------------------------------------------- |&#10;| cas2(0, 0, 1, 1, 0, 1): true                                             |                                                                     |&#10;|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                                                                     |&#10;|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                                                                     |&#10;|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                                                                     |&#10;|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                                                                     |&#10;|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                                                                     |&#10;|     switch                                                               |                                                                     |&#10;|                                                                          | get(0): 1                                                           |&#10;|                                                                          |   get(0): 1 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |&#10;|                                                                          |     get(0): AtomicRef@1 at AtomicArray.get(AtomicArray.kt:11)       |&#10;|                                                                          |     getValue(): 1 at AtomicArray.get(AtomicArray.kt:11)             |&#10;|                                                                          |   result: 1                                                         |&#10;|                                                                          | cas(1, 1, 0): false                                                 |&#10;|                                                                          |   cas(1,1,0): false at AtomicArrayTest.cas(AtomicArrayTest.kt:20)   |&#10;|                                                                          |     get(1): AtomicRef@2 at AtomicArray.cas(AtomicArray.kt:18)       |&#10;|                                                                          |     compareAndSet(1,0): false at AtomicArray.cas(AtomicArray.kt:18) |&#10;|                                                                          |   result: false                                                     |&#10;|                                                                          | get(1): 0                                                           |&#10;|                                                                          |   get(1): 0 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |&#10;|                                                                          |     get(1): AtomicRef@2 at AtomicArray.get(AtomicArray.kt:11)       |&#10;|                                                                          |     getValue(): 0 at AtomicArray.get(AtomicArray.kt:11)             |&#10;|                                                                          |   result: 0                                                         |&#10;|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                                                                     |&#10;|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                                                                     |&#10;|   result: true                                                           |                                                                     |&#10;| ---------------------------------------------------------------------------------------------------------------------------------------------- |&#10;" type="org.jetbrains.kotlinx.lincheck.LincheckAssertionError">org.jetbrains.kotlinx.lincheck.LincheckAssertionError: 
+= Invalid execution results =
+| -------------------------------------------------------- |
+|           Thread 1           |         Thread 2          |
+| -------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true | get(0): 1                 |
+|                              | cas(1, 1, 0): false [0,1] |
+|                              | get(1): 0 [0,2]           |
+| -------------------------------------------------------- |
+
+---
+Values in &quot;[..]&quot; brackets indicate the number of completed operations
+in each of the parallel threads seen at the beginning of the current operation
+---
+
+The following interleaving leads to the error:
+| ---------------------------------------------------------------------------------------------- |
+|                                 Thread 1                                 |      Thread 2       |
+| ---------------------------------------------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true                                             |                     |
+|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                     |
+|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                     |
+|     switch                                                               |                     |
+|                                                                          | get(0): 1           |
+|                                                                          | cas(1, 1, 0): false |
+|                                                                          | get(1): 0           |
+|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                     |
+|   result: true                                                           |                     |
+| ---------------------------------------------------------------------------------------------- |
+
+Detailed trace:
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                 Thread 1                                 |                              Thread 2                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| cas2(0, 0, 1, 1, 0, 1): true                                             |                                                                     |
+|   cas2(0,0,1,1,0,1): true at AtomicArrayTest.cas2(AtomicArrayTest.kt:26) |                                                                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:24)           |                                                                     |
+|     getValue(): 0 at AtomicArray.cas2(AtomicArray.kt:24)                 |                                                                     |
+|     get(0): AtomicRef@1 at AtomicArray.cas2(AtomicArray.kt:25)           |                                                                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:25)                   |                                                                     |
+|     switch                                                               |                                                                     |
+|                                                                          | get(0): 1                                                           |
+|                                                                          |   get(0): 1 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |
+|                                                                          |     get(0): AtomicRef@1 at AtomicArray.get(AtomicArray.kt:11)       |
+|                                                                          |     getValue(): 1 at AtomicArray.get(AtomicArray.kt:11)             |
+|                                                                          |   result: 1                                                         |
+|                                                                          | cas(1, 1, 0): false                                                 |
+|                                                                          |   cas(1,1,0): false at AtomicArrayTest.cas(AtomicArrayTest.kt:20)   |
+|                                                                          |     get(1): AtomicRef@2 at AtomicArray.cas(AtomicArray.kt:18)       |
+|                                                                          |     compareAndSet(1,0): false at AtomicArray.cas(AtomicArray.kt:18) |
+|                                                                          |   result: false                                                     |
+|                                                                          | get(1): 0                                                           |
+|                                                                          |   get(1): 0 at AtomicArrayTest.get(AtomicArrayTest.kt:16)           |
+|                                                                          |     get(1): AtomicRef@2 at AtomicArray.get(AtomicArray.kt:11)       |
+|                                                                          |     getValue(): 0 at AtomicArray.get(AtomicArray.kt:11)             |
+|                                                                          |   result: 0                                                         |
+|     get(1): AtomicRef@2 at AtomicArray.cas2(AtomicArray.kt:26)           |                                                                     |
+|     setValue(1) at AtomicArray.cas2(AtomicArray.kt:26)                   |                                                                     |
+|   result: true                                                           |                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker.check(LinChecker.kt:38)
+	at app//org.jetbrains.kotlinx.lincheck.LinChecker$Companion.check(LinChecker.kt:144)
+	at app//org.jetbrains.kotlinx.lincheck.LinCheckerKt.check(LinChecker.kt:159)
+	at app//AtomicArrayTest.modelCheckingTest(AtomicArrayTest.kt:61)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at app//org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.8.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.8.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.8.1/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

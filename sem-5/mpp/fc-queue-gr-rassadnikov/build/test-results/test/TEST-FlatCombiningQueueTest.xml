@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FlatCombiningQueueTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-18T00:01:18" hostname="MacBook-Pro-Grigorii.local" time="38.669">
+  <properties/>
+  <testcase name="modelCheckingTest" classname="FlatCombiningQueueTest" time="27.377"/>
+  <testcase name="stressTest" classname="FlatCombiningQueueTest" time="11.292"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

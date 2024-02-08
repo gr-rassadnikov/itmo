@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MSQueueTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-15T17:12:20" hostname="MacBook-Pro-Grigorii.local" time="9.502">
+  <properties/>
+  <testcase name="modelCheckingTest" classname="MSQueueTest" time="3.208"/>
+  <testcase name="stressTest" classname="MSQueueTest" time="6.294"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

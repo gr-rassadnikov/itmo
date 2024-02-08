@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FAABasedQueueSimplifiedTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-23T13:30:53" hostname="MacBook-Pro-Grigorii.local" time="24.951">
+  <properties/>
+  <testcase name="modelCheckingTest" classname="FAABasedQueueSimplifiedTest" time="13.333"/>
+  <testcase name="stressTest" classname="FAABasedQueueSimplifiedTest" time="11.618"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

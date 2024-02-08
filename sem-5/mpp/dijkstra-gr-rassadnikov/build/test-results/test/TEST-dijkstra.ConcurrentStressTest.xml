@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dijkstra.ConcurrentStressTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-01-22T13:15:58" hostname="MacBook-Pro-Grigorii.local" time="1.655">
+  <properties/>
+  <testcase name="test on small graphs" classname="dijkstra.ConcurrentStressTest" time="0.749"/>
+  <testcase name="test on trees" classname="dijkstra.ConcurrentStressTest" time="0.462"/>
+  <testcase name="test on very small graphs" classname="dijkstra.ConcurrentStressTest" time="0.444"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

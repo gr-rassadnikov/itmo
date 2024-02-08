@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TreiberStackTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-16T21:57:21" hostname="MacBook-Pro-Grigorii.local" time="7.939">
+  <properties/>
+  <testcase name="modelCheckingTest" classname="TreiberStackTest" time="2.616"/>
+  <testcase name="stressTest" classname="TreiberStackTest" time="5.323"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
