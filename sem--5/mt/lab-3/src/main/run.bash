@@ -1,0 +1,1 @@
+java -jar resources/antlr-4.13.1-complete.jar -no-listener -visitor antlr/MathExpr.g4 -o gen

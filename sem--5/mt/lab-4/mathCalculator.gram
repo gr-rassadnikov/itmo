@@ -1,0 +1,80 @@
+<start> expr
+
+expr -> Int
+    := term exprs
+    ;
+exprs <acc: Int>-> Int
+    := PLUS term #<let next = acc + term> exprs(next) #<exprs>
+    | MINUS term #<let next = acc - term> exprs(next) #<exprs>
+    |  #<acc>
+    ;
+
+BINOM
+    : "C"
+    ;
+
+term -> Int
+    := factor terms(factor) #<terms>
+    ;
+
+terms -> Int
+    := MUL single #<let next = acc * term> terms(next) #<terms>
+    | DIV single #<let next = acc / term> terms(next) #<terms>
+    | BINOM OPENBR num num CLOSEBR #<
+        let next = acc + binomEvaluator(termResult1, termResult2)
+    > terms(next) #<terms>
+    ##<
+       private func binomEvaluator(_ n: Int, _ k: Int) -> Int{
+               return factorial(n)/(factorial(k)*factorial(n - k))
+           }
+
+           func factorial(_ fNumber: Int) -> Int{
+              if fNumber == 0 {
+                 return 1
+              } else {
+                 return fNumber * factorial(fNumber - 1)
+              }
+           }
+    >
+    |  #<acc>
+    ;
+
+single -> Int
+    := O expr C {expr} | num {num}
+    ;
+
+num -> Int
+    := NUM {NUM.parseInt()!!}
+    ;
+
+PLUS
+    : "+"
+    ;
+
+MINUS
+    : "-"
+    ;
+
+DIV
+    : "/"
+    ;
+
+MUL
+    : "*"
+    ;
+
+OPENBR
+    : "("
+    ;
+
+CLOSEBR
+    : ")"
+    ;
+
+NUM
+    : '[0-9]+'
+    ;
+
+WS
+    :> '\s+'
+    ;
