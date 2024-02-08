@@ -8,10 +8,7 @@ CMakeLists.txt
 *.DS_Store
 
 #------------- ignore directories -------------------------
-*.git*
-*.gihub
-*.idea
-*.gitignore
+
 *.gradle
 *.idea
 *.teamcity
