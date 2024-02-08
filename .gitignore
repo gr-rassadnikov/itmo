@@ -7,16 +7,6 @@ CMakeLists.txt
 .DS_Store
 *.DS_Store
 
-#------------- ignore directories -------------------------
-
-#-------------- C++ tests ignore ---------------------------
-
-*test*
-*googletest*
-
-
-# -----------------C++ IGNORE------------------------------
-
 # Prerequisites
 *.d
 
