@@ -1,65 +1,77 @@
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <deque>
+#include <map>
+#include <set>
+#include <cmath>
+#include <iomanip>
+#include <unordered_set>
 #include <iostream>
-#include <utility>
 
+using namespace std;
 
-template<typename T>
-class List {
-private:
-
-    struct Node {
-        Node *prev;
-        Node *next;
-        T value;
-
-        explicit Node(T value, Node *prev = nullptr, Node *next = nullptr)
-                : value(std::move(value)),
-                  prev(prev),
-                  next(next) {
-        }
-
-    };
-
-    Node *backNode;
-
-public:
-
-    void push_back(const T &value) {
-        if (!backNode) {
-            backNode = new Node(value);
-        } else {
-            auto *newNode = new Node(value, backNode);
-            backNode->next = newNode;
-            backNode = newNode;
-        }
-    }
-
-    auto toString() -> std::string {
-        std::string str;
-        auto *now = backNode;
-        while (now->prev) {
-            now = now->prev;
-        }
-
-        while (now) {
-            str += now->value + " ";
-            now = now->next;
-        }
-        return str;
-    }
-
-    List() : backNode(nullptr) {
-    }
-
+struct rebro {
+    int e, n;
 };
 
+vector<bool> used;
+vector<vector<rebro>> G;
+vector<int> up;
+vector<int> num;
+vector<int> edges;
+
+int t = 0;
+
+bool dfs(int v, int p, int n) {
+    used[v] = true;
+    num[v] = t++;
+    up[v] = num[v];
+
+    bool was = v == n;
+
+    for (auto to: G[v]) {
+        if (!used[to.e]) {
+            was = was || dfs(to.e, to.n, n);
+        }
+
+        if (to.n != p) {
+            up[v] = min(up[v], up[to.e]);
+        }
+    }
+
+    if (up[v] == num[v] && p != -1 && was) {
+        edges.push_back(p);
+
+    }
+    return was;
+}
 
 int main() {
-    List<std::string> list;
-    list.push_back("1");
-    list.push_back("2");
-    list.push_back("3");
-    list.push_back("4");
-    std::cout << list.toString();
+    int n, m;
+
+    cin >> n >> m;
+    G.resize(n);
+    used.resize(n);
+    num.assign(n, 1e9);
+    up.resize(n, 1e9);
+
+    int a, b;
+    for (int i = 0; i < m; ++i) {
+        cin >> a >> b;
+        --a, --b;
+        G[a].push_back({b, i});
+        G[b].push_back({a, i});
+    }
 
 
+    dfs(0, -1, n - 1);
+
+
+    cout << edges.size() << endl;
+    sort(edges.begin(), edges.end());
+    for (auto i: edges) {
+        cout << i + 1 << " ";
+    }
+    return 0;
 }
